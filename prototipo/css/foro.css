@@ -1,0 +1,225 @@
+:root{
+
+    --bg-color: #1e1e1e;             /* Color de fondo general */
+    --text-color: #e0e0e0;           /* Color de texto */
+    --secondary-bg: #2b2b2b;         /* Fondo para contenedores */
+    --accent-color: #3498db;         /* Color de acento */
+    --delete-color: #9b59b6;         /* Color morado del botón de eliminar */
+    --textarea-bg: #2b2b2b;          /* Fondo para el textarea */
+    --input-border: #444444;         /* Borde para inputs */
+    --comment-bg: #292929;           /* Fondo para comentarios */
+    --reply-bg: #242424;             /* Fondo para respuestas */
+}
+
+/* Reset básico */
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+background-color: var(--bg-color);
+color: var(--text-color);
+font-family: Arial, sans-serif;
+line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Contenedor principal */
+#container {
+max-width: 800px;
+margin: 30px auto; /* Centrado */
+padding: 20px;
+background: var(--secondary-bg); /* Fondo principal */
+border-radius: 8px;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para suavizar */
+}
+
+/* Estilo de los comentarios */
+/* Contenedor principal de comentarios */
+#comments {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo general de comentarios */
+.cmmnt {
+    margin-bottom: 30px; /* Espacio entre comentarios */
+    overflow: hidden;
+}
+
+/* Comentario principal */
+.cmmnt-content {
+    position: relative;
+    padding: 15px;
+    max-width: 70%; /* Limita el ancho */
+    background: #faf7f2; /* Fondo del comentario principal */
+    border-radius: 15px 15px 15px 5px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-left: auto; /* Alinear a la derecha */
+    margin-right: 10px; /* Separación a la derecha */
+    border: 1px solid #8c5e42; /* Borde con color del proyecto */
+}
+
+/* Flecha del comentario principal (derecha) */
+.cmmnt-content::after {
+    content: '';
+    position: absolute;
+    right: -10px; /* Posición en la derecha */
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #faf7f2; /* Color del borde (igual al fondo) */
+}
+
+/* Respuesta a un comentario */
+.replies .cmmnt-content {
+    position: relative;
+    padding: 15px;
+    max-width: 70%; /* Limita el ancho */
+    background: #f3ece2; /* Fondo de la respuesta */
+    border-radius: 5px 15px 15px 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-right: auto; /* Alinear a la izquierda */
+    margin-left: 10px; /* Separación a la izquierda */
+    border: 1px solid #c29e75; /* Borde con color del proyecto */
+    margin-top: 20px; /* Espacio entre comentarios y respuestas */
+}
+
+/* Flecha de la respuesta (izquierda) */
+.replies .cmmnt-content::after {
+    content: '';
+    position: absolute;
+    left: -10px; /* Posición en la izquierda */
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f3ece2; /* Color del borde (igual al fondo) */
+}
+
+/* Estilo del usuario y fecha */
+.cmmnt-content header {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Estilo del enlace de usuario */
+.cmmnt-content .userlink {
+    font-weight: bold;
+    color: #2c3e50; /* Azul oscuro */
+}
+
+/* Fecha del comentario */
+.cmmnt-content .pubdate {
+    font-size: 12px;
+    color: #8c5e42; /* Color del proyecto */
+}
+
+/* Estilo de los botones y enlaces dentro de los comentarios */
+.cmmnt-content span a {
+    color: #2c3e50; /* Azul oscuro */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Estilo del botón de eliminar */
+.cmmnt-content {
+    position: relative;
+    width: auto; /* Ajusta el ancho al contenido */
+    padding: 15px;
+    max-width: 70%; /* Limita el ancho máximo */
+    background: #faf7f2;
+    border-radius: 15px 15px 15px 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: 10px;
+    border: 1px solid #8c5e42;
+    overflow: hidden; /* Asegura que el contenido no desborde */
+}
+
+
+
+/* Estilo para textarea */
+textarea {
+width: 100%;
+padding: 12px 15px;
+margin-top: 15px;
+border: 2px solid var(--input-border); /* Borde por defecto */
+border-radius: 10px; /* Bordes redondeados */
+background-color: var(--textarea-bg);
+color: var(--text-color);
+font-size: 1em;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+resize: vertical; /* Permitir ajuste vertical */
+transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Añadir transición para el borde */
+outline: none; /* Eliminar el borde de enfoque */
+}
+
+textarea:focus {
+background-color: #333333; /* Fondo más claro al hacer foco */
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
+border: 2px solid #9b59b6; /* Borde morado brillante al hacer foco */
+}
+
+input[type="submit"].btn-delete {
+    position: absolute !important; /* Posición absoluta */
+    top: 10px !important; /* Alineación superior */
+    right: 10px !important; /* Alineación derecha */
+    background: none !important; /* Sin fondo */
+    border: none !important; /* Sin borde */
+    padding: 0 !important; /* Sin padding */
+    cursor: pointer !important; /* Mostrar cursor de mano */
+    font-size: 0.85em !important; /* Tamaño de fuente */
+    color: #8e44ad !important; /* Color morado */
+    text-decoration: none !important; /* Sin subrayado por defecto */
+    display: inline-block !important; /* Mostrar como inline-block */
+}
+
+/* Estilo al pasar el cursor por el botón */
+input[type="submit"].btn-delete:hover {
+    text-decoration: underline !important; /* Mostrar subrayado */
+    color: #8e44ad !important; /* Mantener el color morado */
+}
+
+/* Estilo para enlaces */
+.cmmnt-content span a {
+color: var(--accent-color);
+text-decoration: none;
+font-size: 0.85em;
+}
+
+.cmmnt-content span a:hover {
+text-decoration: underline;
+}
+
+/* Encabezados y textos */
+h1, h2, h3, p {
+margin-bottom: 15px;
+text-align: center;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+#container {
+    padding: 15px;
+}
+
+#comments .cmmnt {
+    padding: 12px;
+}
+
+
+
+textarea {
+    font-size: 0.9em;
+}
+}

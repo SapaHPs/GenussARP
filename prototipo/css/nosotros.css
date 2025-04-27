@@ -1,0 +1,223 @@
+/* Estilos Generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Misión y Visión */
+.mission-vision {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background-color: #e8f5e9;
+}
+
+.mission, .vision {
+  flex-basis: 45%;
+  text-align: center;
+}
+
+.mission h2, .vision h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+.mission p, .vision p {
+  font-size: 1.1rem;
+  color: #4f4f4f;
+}
+
+/* Historia */
+.history {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.history h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event {
+  width: 30%;
+  text-align: center;
+}
+
+.event h3 {
+  font-size: 1.5rem;
+  color: #8c9eff;
+}
+
+.event p {
+  font-size: 1rem;
+  color: #4f4f4f;
+}
+
+/* Equipo */
+.team {
+  background-color: #f1f8e9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team h2 {
+  margin-bottom: 2rem;
+}
+
+.team-member {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 1rem;
+}
+
+.team-member .front, .team-member .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.team-member .front {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member .back {
+  background-color: #c5e1a5;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.team-member.flipped .back {
+  transform: rotateY(0deg);
+}
+
+/* Valores */
+.values {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background-color: #fff3e0;
+}
+
+.value {
+  text-align: center;
+  width: 30%;
+}
+
+.value img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Testimonios */
+.testimonials {
+  background-color: #e3f2fd;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonial-slider {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  margin-bottom: 1.5rem;
+}
+
+/* FAQ */
+.faq {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: #1e88e5;
+}
+
+/* Inspiración */
+.inspirational {
+  background-color: #b2dfdb;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.inspirational h2 {
+  font-size: 2rem;
+  color: #004d40;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #004d40;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #00695c;
+}

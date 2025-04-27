@@ -23,4 +23,3 @@ require_once "models/ModelReporte.php";
 // Crear una instancia de MvcController y llamar al método plantilla
 $obj = new MvcController();
 $obj->plantilla();
-?>

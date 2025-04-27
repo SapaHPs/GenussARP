@@ -1,0 +1,131 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --accent-color: #9b59b6;
+  --secondary-bg: #2c2c2c;
+  --highlight-color: #3498db;
+  --gray: #a0a0a0;
+  --border-color: #9b59b6;
+}
+
+.content-wrapper {
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+ 
+}
+
+/* Estilos comunes para las secciones */
+.content-block {
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+  border: 3px dashed var(--bg-color);
+}
+
+.content-block.reversed {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  max-width: 450px;
+  color: var(--gray);
+}
+
+.text h2 {
+  color: var(--accent-color);
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.text p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+.image {
+  flex: 1;
+  max-width: 450px;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px dashed var(--bg-color);
+  object-fit: cover;
+}
+
+/* Sección de Opiniones */
+.opinions-section {
+  text-align: center;
+}
+
+.opinions-section h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.opinions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.opinion-card {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px dashed var(--border-color);
+  color: var(--gray);
+}
+
+.opinion-author {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Sección del Equipo */
+.team-section {
+  text-align: center;
+}
+
+.team-section h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.team-member {
+  flex: 1;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px dashed var(--bg-color);
+}
+
+.team-member h3 {
+  color: var(--highlight-color);
+  margin-top: 10px;
+}
+
+.team-member p {
+  color: var(--gray);
+}

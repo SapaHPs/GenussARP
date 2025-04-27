@@ -20,14 +20,11 @@ require_once "models/ModelComentarios.php";
 require_once "models/ModelEstudiantes.php";
 require_once "models/ModelReporte.php";
 
-
 if ($_SESSION['usuario']==null || $_SESSION['usuario']=='' ) {
-	session_destroy();
-	header('location:index.php?action=ingresar');
-}else{
-
-
-$obj = new MvcController();
-$obj->plantillaAdmin();
+    session_destroy();
+    header('location:index.php?action=ingresar');
+} else {
+    $obj = new MvcController();
+    $obj->plantillaAdmin();
 }
 ?>
